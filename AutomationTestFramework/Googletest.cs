@@ -4,20 +4,19 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
 
-
 namespace  AutomationTestFramework
 {
     [TestFixture]
-   public class Googletest
+    public class Googletest
     {
         public IWebDriver Driver { get; set; }
-        public WebDriverWait Wait { get; set;}
+        public WebDriverWait Wait { get; set; }
 
         [SetUp]
         public void SetUpTest()
         {
             this.Driver = new FirefoxDriver();
-           this.Wait = new WebDriverWait(this.Driver, TimeSpan.FromSeconds(30));
+            this.Wait = new WebDriverWait(this.Driver, TimeSpan.FromSeconds(30));
         }
 
         [TearDown]
@@ -25,9 +24,4 @@ namespace  AutomationTestFramework
         {
             this.Driver.Quit();
         }
-
-       
-
-
     }
-}
